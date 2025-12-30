@@ -1,47 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2390327491381658');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2390327491381658&ev=PageView&noscript=1"
-/></noscript>
-    <!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mk Bhai</title>
+    <title>Mk Bhai - No 1 Tipper</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
                               url('https://raw.githubusercontent.com/onlinetipper/mkbhai/c6b2692504d27f593580e6d4cb3b7284f8d88588/blackf.jpg');
             background-size: cover;
             background-position: center;
@@ -57,167 +27,151 @@ src="https://www.facebook.com/tr?id=2390327491381658&ev=PageView&noscript=1"
 
         .hero {
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 20px;
+            padding: 40px 30px;
+            border-radius: 30px;
             text-align: center;
-            max-width: 500px;
+            max-width: 450px;
             width: 100%;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        /* --- Profile Image Style --- */
+        .profile-container {
+            width: 120px;
+            height: 120px;
+            margin: -90px auto 20px auto; /* Image ko thoda upar nikalne ke liye */
+            border-radius: 50%;
+            border: 5px solid #ffcc00;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            background: #222;
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .heading1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             color: #ffcc00;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 5px;
         }
 
         .paragraph {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 20px;
             color: #fff;
+            font-weight: 500;
         }
 
         .counter {
             background: #ff3333;
-            padding: 8px 15px;
+            padding: 10px 20px;
             border-radius: 50px;
             font-weight: bold;
             display: inline-block;
             margin-bottom: 25px;
             font-size: 0.9rem;
-        }
-
-        #countdown {
-            color: #fff;
-            font-size: 1.1rem;
+            letter-spacing: 1px;
         }
 
         .points {
             text-align: left;
             margin: 20px 0;
-            background: rgba(0,0,0,0.3);
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        .points ul {
-            list-style: none;
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #ffcc00;
         }
 
         .points li {
-            margin-bottom: 10px;
-            font-size: 1rem;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
             display: flex;
             align-items: center;
         }
 
         .points i {
             color: #ffcc00;
-            margin-right: 10px;
-        }
-
-        .button-container {
-            margin: 20px 0;
+            margin-right: 12px;
         }
 
         .button-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             background: linear-gradient(45deg, #0088cc, #24A1DE);
             color: white;
-            padding: 15px 20px;
+            padding: 18px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            border-radius: 10px;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            margin: 15px 0;
         }
 
-        .button-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(36, 161, 222, 0.5);
-        }
-
-        /* Animation for Bottom Button */
-        .pulse {
-            animation: pulse-red 2s infinite;
-        }
-
-        @keyframes pulse-red {
+        .pulse { animation: pulse-btn 2s infinite; }
+        @keyframes pulse-btn {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
 
-        .clr {
-            font-family: 'Oswald', sans-serif;
-            color: #ffcc00;
-            margin: 20px 0;
-            font-size: 1.3rem;
-        }
+        .clr { color: #ffcc00; font-size: 1.4rem; margin-top: 20px; font-weight: bold; }
     </style>
-
-    <script>
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '813352405000767'); fbq('init', '1044388354567739');
-      fbq('track', 'PageView');
-    </script>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="content">
-      <h1 class="heading1">M.K. BHAI..</h1>
-      <p class="paragraph">💰 No 1 Tipper 🎯</p>
+    <div class="hero">
+        <div class="profile-container">
+            <img src="https://raw.githubusercontent.com/onlinetipper/mkbhai/main/profile.jpg" alt="MK Bhai">
+        </div>
+
+        <div class="content">
+            <h1 class="heading1">M.K. BHAI..</h1>
+            <p class="paragraph">💰 No 1 Tipper 🎯</p>
+        </div>
+
+        <div class="counter">JOINING ENDS IN: <span id="countdown">60</span>s</div>
+
+        <a href="https://t.me/+EH6DTNthtcc5N2I1" class="button-link pulse">
+            <i class="fa-brands fa-telegram"></i> JOIN TELEGRAM NOW
+        </a>
+        
+        <div class="points">
+            <ul>
+                <li><i class="fa-solid fa-circle-check"></i> Every Day 3 Limit Plus ➕️</li>
+                <li><i class="fa-solid fa-circle-check"></i> IPL ME SARE MATCHES PASS</li>
+                <li><i class="fa-solid fa-circle-check"></i> 95% Accuracy Guaranteed 🎯</li>
+            </ul>
+        </div>
+
+        <h2 class="clr">💰 Profit King 💰</h2>
+
+        <a href="https://t.me/+EH6DTNthtcc5N2I1" class="button-link pulse">
+            <i class="fa-brands fa-telegram"></i> JOIN FOR FREE
+        </a>
     </div>
 
-    <div class="counter">FREE JOINING ENDS IN... <span id="countdown">60</span>s</div>
-
-    <div class="button-container">
-      <a href="https://t.me/+EH6DTNthtcc5N2I1" class="button-link pulse">
-        JOIN NOW FOR FREE <i class="fa-brands fa-telegram"></i>
-      </a>
-    </div>
-    
-    <div class="content-wrapper">
-      <div class="points">
-        <ul>
-          <li><i class="fa-regular fa-hand-point-right"></i> Every Day 3 Limit Plus ➕️</li>
-          <li><i class="fa-regular fa-hand-point-right"></i> IPL ME SARE MATCHES PASS</li>
-          <li><i class="fa-regular fa-hand-point-right"></i> 95% Accuracy Guaranteed 🎯</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2 class="clr">💰 Profit King 💰</h2>
-
-    <div class="button-container">
-      <a href="https://t.me/+EH6DTNthtcc5N2I1" class="button-link pulse">
-        JOIN NOW FOR FREE <i class="fa-brands fa-telegram"></i>
-      </a>
-    </div>
-  </div>
-
-  <script>
-    let remainingSeconds = 60;
-    function updateCountdown() {
-      document.getElementById("countdown").innerHTML = remainingSeconds;
-      remainingSeconds--;
-      if (remainingSeconds < 0) { remainingSeconds = 60; }
-    }
-    setInterval(updateCountdown, 1000);
-  </script>
+    <script>
+        let remainingSeconds = 60;
+        function updateCountdown() {
+            document.getElementById("countdown").innerHTML = remainingSeconds;
+            remainingSeconds--;
+            if (remainingSeconds < 0) { remainingSeconds = 60; }
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
 
 </body>
 </html>
